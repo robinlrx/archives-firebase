@@ -9,5 +9,5 @@ const db = getFirestore(app);
 // Get data from murder collections
 const querySnapshot = await getDocs(collection(db, "murder"));
 querySnapshot.forEach((doc) => {
-  console.log(`${doc.id} => ${doc.data()}`);
+  console.log(doc.data());
 });
