@@ -5,7 +5,6 @@ import { app } from '/firebase-config.js';
 
 //constants
 const db = getFirestore(app);
-const list = document.getElementsByClassName('list')[0]
 const yesButton = document.getElementById('yes')
 const noButton = document.getElementById('no')
 
@@ -20,14 +19,20 @@ const noButton = document.getElementById('no')
 const userRef = doc(db, "murder", "nbz24O9VmlyMaxGnRQuc");
 console.log(userRef)
 
+// upddate firebase collection value
 yesButton.addEventListener("click", () => {
 	updateDoc(userRef, {
 		yes: increment(1)
+	}).then(function() {
+		window.location.href = 'chart.html';
 	});
+	
 });
 
 noButton.addEventListener("click", () => {
 	updateDoc(userRef, {
 		no: increment(1)
+	}).then(function() {
+		window.location.href = 'chart.html';
 	});
 });

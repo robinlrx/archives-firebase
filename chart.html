@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		body {
+			display: flex;
+			align-items: flex-end;
+		}
+		.chart {
+			width: 100px;
+			margin: 20px;
+		}
+		.chart-yes {
+			background-color: green;
+		}
+		.chart-no {
+			background-color: red;
+		}
+		p{
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<div class="chart chart-yes"></div>
+		<p class="yes-text"></p>
+	</div>
+	<div>
+		<div class="chart chart-no"></div>
+		<p class="no-text"></p>
+	</div>
+
+	<script type="module" src="/chart.js"></script>
+</body>
+</html>
