@@ -7,12 +7,26 @@
 	<title>Document</title>
 	<style>
 		body {
-			display: flex;
-			align-items: flex-end;
 			font-family: Arial, Helvetica, sans-serif;
 		}
+		h1 {
+			text-align: center;
+		}
+		section {
+			display: flex;
+			justify-content: center;
+			align-items: flex-start;
+			flex-direction: column;
+		}
+		.dataviz {
+			width: 100%;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			align-items: center;
+		}
 		.chart {
-			width: 100px;
+			height: 100px;
 			margin: 20px;
 		}
 		.chart-yes {
@@ -21,6 +35,9 @@
 		.chart-no {
 			background-color: red;
 		}
+		.chart-jsp {
+			background-color: orange;
+		}
 		p{
 			text-align: center;
 			font-weight: bold;
@@ -28,14 +45,23 @@
 	</style>
 </head>
 <body>
-	<div>
-		<div class="chart chart-yes"></div>
-		<p class="yes-text"></p>
-	</div>
-	<div>
-		<div class="chart chart-no"></div>
-		<p class="no-text"></p>
-	</div>
+
+	<h1>Pensez-vous avoir été objectif ?</h1>
+	<section>
+		<h2>Data 1: Omar est-il le meurtrier ?</h2>
+		<div class="dataviz dataviz-no">
+			<div class="chart chart-yes"></div>
+			<p class="yes-text"></p>
+		</div>
+		<div class="dataviz dataviz-yes">
+			<div class="chart chart-no"></div>
+			<p class="no-text">jhghjgjh</p>
+		</div>
+		<div class="dataviz dataviz-jsp">
+			<div class="chart chart-jsp"></div>
+			<p class="jsp-text">jhghjgjh</p>
+		</div>
+	</section>
 
 	<script type="module" src="/chart.js"></script>
 </body>

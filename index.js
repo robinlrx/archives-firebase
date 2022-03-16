@@ -7,11 +7,13 @@ import { app } from '/firebase-config.js';
 const db = getFirestore(app);
 const yesButton = document.getElementById('yes')
 const noButton = document.getElementById('no')
+const jspButton = document.getElementById('jsp')
+// const chartLink = window.location.href = 'chart.html';
 // chart constant
-const yesChart = document.getElementsByClassName('chart-yes')[0];
-const noChart = document.getElementsByClassName('chart-no')[0];
-const yesText = document.getElementsByClassName('yes-text')[0];
-const noText = document.getElementsByClassName('no-text')[0];
+// const yesChart = document.getElementsByClassName('chart-yes')[0];
+// const noChart = document.getElementsByClassName('chart-no')[0];
+// const yesText = document.getElementsByClassName('yes-text')[0];
+// const noText = document.getElementsByClassName('no-text')[0];
 
 // Get data from all murder collections
 // const querySnapshot = await getDocs(collection(db, "murder"));
@@ -30,12 +32,12 @@ yesButton.addEventListener("click", () => {
 	updateDoc(docRef, {
 		yes: increment(1)
 	}).then(function() {
-		// window.location.href = 'chart.html';
-		let yesValue = docSnap.data().yes + 1
-		console.log('yesValue:', yesValue)
-		let noValue = docSnap.data().no
-		let yesPourcentage = (yesValue / (noValue + yesValue)) * 100
-		console.log('yesPourcentage:', yesPourcentage + '%')
+		window.location.href = 'chart.html';
+		// let yesValue = docSnap.data().yes + 1
+		// console.log('yesValue:', yesValue)
+		// let noValue = docSnap.data().no
+		// let yesPourcentage = (yesValue / (noValue + yesValue)) * 100
+		// console.log('yesPourcentage:', yesPourcentage + '%')
 	});
 	
 });
@@ -44,13 +46,21 @@ noButton.addEventListener("click", () => {
 	updateDoc(docRef, {
 		no: increment(1)
 	}).then(function() {
-		// window.location.href = 'chart.html';
-		let noValue = docSnap.data().no + 1
-		console.log('noValue:', noValue)
-		let yesValue = docSnap.data().yes
-		let yesPourcentage = (yesValue / (noValue + yesValue)) * 100
-		let noPourcentage = 100 - yesPourcentage
-		console.log('noPourcentage:', noPourcentage + '%')
+		window.location.href = 'chart.html';
+		// let noValue = docSnap.data().no + 1
+		// console.log('noValue:', noValue)
+		// let yesValue = docSnap.data().yes
+		// let yesPourcentage = (yesValue / (noValue + yesValue)) * 100
+		// let noPourcentage = 100 - yesPourcentage
+		// console.log('noPourcentage:', noPourcentage + '%')
+	});
+});
+
+jspButton.addEventListener("click", () => {
+	updateDoc(docRef, {
+		jsp: increment(1)
+	}).then(function() {
+		window.location.href = 'chart.html';
 	});
 });
 
