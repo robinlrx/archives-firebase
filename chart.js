@@ -35,5 +35,5 @@ jspChart.style.width = `${jspPourcentage}px`
 
 yesText.innerHTML = `Comme ${yesPourcentage.toFixed()}% des utilisateurs, <br> vous avez répondu ... <br> OUI`
 noText.innerHTML = `Comme ${noPourcentage.toFixed()}% des utilisateurs, <br> vous avez répondu ... <br> NON`
-jspText.innerHTML = `Comme ${jspPourcentage.toFixed()}% des utilisateurs, <br> vous avez répondu ... <br> NON`
+jspText.innerHTML = `Comme ${jspPourcentage.toFixed()}% des utilisateurs, <br> vous avez répondu ... <br> NE SAIS PAS`
 
